@@ -44,7 +44,7 @@ def test_prediction_endpoint_returns_prediction(flask_test_client):
     post_json = {'input':subject}
 
     # When
-    response = flask_test_client.post('/v1/predict/sentiment_analysis',
+    response = flask_test_client.post('/predict',
                                       json=post_json)
 
     # Then
@@ -53,5 +53,5 @@ def test_prediction_endpoint_returns_prediction(flask_test_client):
     prediction = response_json['predictions']
     #response_version = response_json['version']
     assert prediction is not None
-    assert ((prediction  == 'Positive' )or (prediction   == 'Negitive') or(prediction   == 'Neutral') or (prediction  == 'Provide some non numerical and meaningful snetences as input')) 
+    assert ((prediction  == 'Positive' )or (prediction   == 'Negative') or(prediction   == 'Neutral') or (prediction  == 'Please provide a non-numerical and meaningful sentence(s) to determine sentiment')) 
 
