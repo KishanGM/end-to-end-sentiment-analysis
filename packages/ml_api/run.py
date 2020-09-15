@@ -1,5 +1,5 @@
 from api.app import create_app
-from api.config import DevelopmentConfig
+from api.config import DevelopmentConfig,ProductionConfig
 
 
 application = create_app(
