@@ -6,8 +6,8 @@ flask==1.0.2
 
 #JPype1
 
--e "C:\Users\Kishan\Desktop\end-to-end-sentiment-analysis\packages\sentiment_analysis"
-#sentiment_analysis
+#-e "C:\Users\Kishan\Desktop\end-to-end-sentiment-analysis\packages\sentiment_analysis"
+sentiment_analysis
 
 # Deployment
 gunicorn==19.9.0
