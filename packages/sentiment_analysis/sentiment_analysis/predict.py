@@ -8,7 +8,7 @@ nltk.download('vader_lexicon')
 def make_predictions(strinput) -> str:
     sinput = str(strinput)
     if sinput.isdecimal():
-        return "Provide some non numerical and meaningful snetences as input"
+        return "Please provide a non-numerical and meaningful sentence(s) to determine sentiment"
     else:
         sid = SentimentIntensityAnalyzer()
         scores = sid.polarity_scores(sinput)
@@ -16,6 +16,6 @@ def make_predictions(strinput) -> str:
         if compound > 0:
             return "Positive"
         elif compound <0:
-            return "Negitive"
-        else:
+            return "Negative"
+        elif compound == 0:
             return "Neutral"

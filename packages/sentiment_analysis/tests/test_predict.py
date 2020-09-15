@@ -12,4 +12,4 @@ def test_make_prediction():
     
     # Then
     assert subject is not None
-    assert ((subject == 'Positive' )or (subject  == 'Negitive') or(subject  == 'Neutral') or (subject == 'Provide some non numerical and meaningful snetences as input')) 
+    assert ((subject == 'Positive' )or (subject  == 'Negative') or(subject  == 'Neutral') or (subject == 'Provide non-numerical and meaningful sentences as input')) 
