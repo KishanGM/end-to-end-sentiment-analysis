@@ -58,5 +58,3 @@ def version():
     if request.method == 'GET':
         return jsonify({'model_version': _version,
                         'api_version': api_version})
-
-
